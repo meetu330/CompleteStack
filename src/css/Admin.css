@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid #f00 !important; */
+}
+
+body {
+  overflow-x: hidden !important;
+  font-family: "Poppins", sans-serif;
+}
+
+ .ftco-section .form-control {
+  background: transparent;
+  border: none;
+  height: 5rem;
+  color: white;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4rem;
+  padding: 0rem 2rem;
+  transition: 0.3s;
+  font-size: 1.5rem;
+}
+
+.ftco-section .form-control:hover,
+.ftco-section .form-control:focus {
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn.btn-primary {
+  background: #fbceb5;
+  border: 1px solid #fbceb5;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+.btn.btn-primary:hover {
+  border: 1px solid #fbceb5;
+  background: transparent;
+}
+.btn.btn-primary.btn-outline-primary {
+  border: 1px solid #fbceb5;
+  background: transparent;
+  color: #fbceb5;
+}
+
+.ftco-section {
+  height: 80vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.form-group {
+  position: relative;
+  margin: 1.5rem 0rem;
+}
+
+.heading {
+  font-size: 3.5rem;
+}
+
+.ftco-section .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  object-fit: cover;
+}
+
+.ftco-section::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+.form-group h5 {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.fa-unlock-alt , .fa-user {
+  position: absolute;
+  right: 3rem;
+  top: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.box {
+  background: rgba(1, 34, 69, 0.5);
+  width: 45rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.6) 7px 7px ;
+  border: 2px solid #1e1e1e30;
+}
+
+/* lOADER  */
+
+.parentLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+}
+
+.parentLoader div img {
+  height: 60rem;
+}
+
+
+
+
+
+/* Login Page plane Animation */
+
+
+
+
+.track,
+.plane {
+  position: absolute;
+}
+
+.plane-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.plane {
+  margin-top: -20px;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom: 40px solid #fbceb5;
+}
+
+.plane-tail {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom: 10px solid #1d1e22;
+}
+
+.track {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 2px dashed #727272;
+}
+
+.track-1 {
+  top: 120px;
+  left: -180px;
+}
+
+.track-1 .plane-wrapper {
+  transform: translate(50%, 125%) rotate(45deg);
+}
+
+.track-2 {
+  top: 150px;
+  right: -190px;
+}
+
+.track-2 .plane-wrapper {
+  transform: translate(50%, 125%) rotate(-150deg);
+}
+
+.track-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+@keyframes track-1-keyframes {
+  0% { transform: rotate(-40deg); }
+  100% { transform: rotate(320deg); }
+}
+
+.track-1 .track-inner {
+  animation: track-1-keyframes 4s infinite linear;
+}
+
+@keyframes track-2-keyframes {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.track-2 .track-inner {
+  animation: track-2-keyframes 4s infinite linear;
+}

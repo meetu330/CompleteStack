@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    
+    <!-- Font Awesome  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="%PUBLIC_URL%/js/style.css" type="text/css">
+    <script src="%PUBLIC_URL%/js/script.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    
+    <title>Complete Stack</title>
+  </head>
+  <body>
+   
+    <div id="root"></div>
+    
+  </body>
+</html>
+
+  
+<script type="text/javascript">
+$(document).ready(function() 
+{
+    $(document).on('change','.vImage',function()
+    {
+      var name = $(this).attr('id');
+      
+      if (this.files && this.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) 
+        {
+          if(name=='vImage')
+          {
+            $('.img1').attr('src', e.target.result);
+          }
+          else if(name=='vImage1')
+          {
+             $('.img11').attr('src', e.target.result);
+          }
+          else if(name=='vImage2')
+          {
+             $('.img2').attr('src', e.target.result);
+          }
+          else if(name=='vImage3')
+          {
+             $('.img3').attr('src', e.target.result);
+          }
+          else if(name=='vImage4')
+          {
+             $('.img4').attr('src', e.target.result);
+          }
+           else if(name=='vImage5')
+          {
+             $('.img5').attr('src', e.target.result);
+          }
+          
+        };
+         reader.readAsDataURL(this.files[0]);
+      }
+    });
+
+    // $(document).on('change','.vImage1',function()
+    // {
+      
+    //   if (this.files && this.files[0]) {
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) 
+    //     {
+    //       console.log(e.target.result);
+    //       $('.img11').attr('src', e.target.result);
+    //     };
+    //      reader.readAsDataURL(this.files[0]);
+    //   }
+    // });
+    // $(document).on('change','.vImage2',function()
+    // {
+      
+    //   if (this.files && this.files[0]) {
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) 
+    //     {
+    //       console.log(e.target.result);
+    //       $('.img2').attr('src', e.target.result);
+    //     };
+    //      reader.readAsDataURL(this.files[0]);
+    //   }
+    // });
+});
+</script>
